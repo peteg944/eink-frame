@@ -1,0 +1,14 @@
+[Unit]
+Description=Python display driver for picture frame
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+Environment="PYTHONPATH=$PYTHONPATH:/home/pi/.local/lib/python3.7/site-packages"
+ExecStart=/usr/bin/python /home/pi/Documents/pictureserver/display.py
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
+

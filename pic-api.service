@@ -1,0 +1,14 @@
+[Unit]
+Description=Node.js web api for picture frame
+After=network.target
+Requires=mariadb.service
+
+[Service]
+Type=simple
+User=pi
+ExecStart=yarn --cwd /home/pi/Documents/ui/api/ start
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
+

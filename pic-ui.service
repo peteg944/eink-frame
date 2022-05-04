@@ -1,0 +1,14 @@
+[Unit]
+Description=Node.js web UI for picture frame
+After=network.target
+Requires=mariadb.service pic-api.service
+
+[Service]
+Type=simple
+User=pi
+ExecStart=/usr/local/bin/serve -l 80 -s /home/pi/Documents/ui/frontend/build
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
+

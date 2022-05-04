@@ -1,0 +1,49 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "API for picture frame",
+  "main": "dist",
+  "author": "Pete",
+  "license": "ISC",
+  "entry": "src/index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development nodemon src/index.js --exec babel-node",
+    "start": "node dist",
+    "build": "./node_modules/.bin/babel src --out-dir dist --copy-files",
+    "prestart": "npm run -s build"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": 7,
+      "sourceType": "module"
+    },
+    "env": {
+      "node": true
+    },
+    "rules": {
+      "no-console": 0,
+      "no-unused-vars": 1
+    }
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "image-size": "^1.0.0",
+    "multer": "^1.4.2",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.2",
+    "sharp": "^0.28.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.5",
+    "@babel/node": "^7.14.5",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/preset-env": "^7.14.5",
+    "eslint": "^7.28.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "nodemon": "^2.0.7"
+  }
+}
