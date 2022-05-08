@@ -38,13 +38,6 @@ def show_image(display: AutoEPDDisplay, path: str):
 
     print(' Orig image width: ' + str(image.width) + ' height: ' + str(image.height))
 
-    # exif = image._getexif()
-    # if orientation_key in exif:
-    #     orientation = exif[orientation_key]
-    #     if orientation == 6:
-    #         print(' Rotating..')
-    #         image = image.rotate(-90, expand=True)
-
     # Determine if the image is wide or tall
     ratio = image.width / image.height
     if ratio > RATIO_DISPLAY:
