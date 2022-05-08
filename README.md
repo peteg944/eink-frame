@@ -36,4 +36,4 @@ The services are:
     * Uses the [`IT8951` library](https://github.com/GregDMeyer/IT8951)
     * Location: `pictureserver/`
 
-<img src="images/RPReplay_Final1651948812.gif" alt="uploading an image" width="70%">
+<img src="images/RPReplay_Final1651948812.gif" alt="uploading an image" width="50%">
